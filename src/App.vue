@@ -5,9 +5,10 @@ import { SearchBox } from './components/search-box'
 
 <template>
   <div class="bg-gray-200 h-screen min-h-120">
-    <div class="container mx-a h-full px-4">
+    <div class="container mx-a h-full px-8">
       <Header />
-      <SearchBox class="mt-10 mx-a w-auto max-w-xl" />
+      <h1 class="text-center text-4xl mb-5">🛫</h1>
+      <SearchBox class="mx-a w-auto max-w-xl" />
     </div>
   </div>
 </template>
