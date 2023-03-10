@@ -38,6 +38,11 @@ function handleSearch() {
   inputActived.value = false
 }
 
+function handleSelect(suggestion: string) {
+  inputValue.value = suggestion
+  handleSearch()
+}
+
 onMounted(() => {
   window.addEventListener('click', handleDocumentClick)
 })
@@ -79,7 +84,7 @@ onBeforeUnmount(() => {
           v-for="(item, index) in suggestions"
           :key="index"
           class="cursor-pointer hover:bg-gray-100"
-          @click="handleSearch"
+          @click="handleSelect(item.value)"
         >
           <div class="mx-4 flex items-center">
             <div class="mr-3 flex-shrink-0">
